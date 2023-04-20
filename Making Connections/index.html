@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"> 
+        <div id="navbar">
+            <div id="navbar-content">
+                <div class="nav-links">
+                    <h1 class="nav-title">The Dojo</h1>
+                    <a href="#">○ Home</a>
+                    <a href="#" class="active">◉ My Profile</a>
+                    <a href="#">○ Find Connections</a>
+                </div> 
+                <p><button class="btn" onclick="signout(this)">Sign Out</button></p>            
+            </div>   
+        </div>
+        <div class="left-comlun">
+            <div class="user-card">
+                <div class="big bar"></div>
+                <div class="picture"><img src="icons/user-circle.png" class="picture" id="profilePicture" alt="Profile Picture"></div> 
+                <div class="information">
+                    <h2 id="userName">Adrian M.</h2>
+                    <h3><img src="icons/map-marker.png" class="icon" alt=""> Pennsylvania</h3>  
+                    <p>Developer | Engineer | Problem Solver<br>
+                    Master of shadows and the internet!</p>
+                    <p><a href="#" onclick="changeUser('userName'); changeImage('profilePicture')"><img src="icons/gear.png" class="icon-2" alt=""> edit profile</a></p>
+                </div>
+            </div>
+            <div class="education"> 
+                <div class="education-bar"> 
+                    <div class="box-titles">Education</div>
+                </div>
+                <div class="information-education">
+                <h2>Coding Dojo - Full Stack Bootcamp</h2>
+                <h3>March 2023 - November 2023</h3>
+                <p>Triple black belt in Python, Javascript, Mern, HTML, and CSS</p>
+                </div>
+            </div>       
+        </div>
+        <div class="right-comlun">
+            <div class="connection-request">
+                <div class="small bar">
+                    <p id="requests">2</p>
+                    <p class="box-titles">Connection Requests</p>
+                </div>
+                <div class="incoming-request" id="request1">
+                    <div class="display">
+                        <img src="images/todd-s.jpg" class="people" alt="">
+                        <span>Todd E</span>
+                    </div>
+                    <div>
+                        <button onclick="disappear('request1'); deleteRequests('requests'); addConnection('notification')" onmousemove="changeColor('acceptbtn1')" onmouseleave="reset('acceptbtn1')"><img src="icons/accept-circle.png" class="request-button" id="acceptbtn1"  alt="accept"></button>
+                        <button onclick="disappear('request1'); deleteRequests('requests')" onmousemove="changeColor('declinebtn1')" onmouseleave="reset('declinebtn1')"><img src="icons/close-circle.png" class="request-button decline" id="declinebtn1" alt="decline"></button>
+                    </div>
+                </div>
+                <div class="incoming-request" id="request2">
+                    <div class="display">
+                        <img src="images/phil-s.jpg" class="people" alt=""> 
+                        <span> Phil K.</span>
+                    </div>
+                    <div>
+                        <button onclick="disappear('request2'); deleteRequests('requests'); addConnection('notification')" onmousemove="changeColor('acceptbtn2')" onmouseleave="reset('acceptbtn2')"><img src="icons/accept-circle.png" class="request-button" id="acceptbtn2"  alt="accept"></button>
+                        <button onclick="disappear('request2'); deleteRequests('requests')" onmousemove="changeColor('declinebtn2')" onmouseleave="reset('declinebtn2')"><img src="icons/close-circle.png" class="request-button" id="declinebtn2" alt="decline"></button>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="your-connections">
+                <div class="small bar">
+                    <p id="notification">500</p> 
+                    <div class="box-titles">Your Connections</div>
+                </div>
+                <div class="contacts">
+                    <p class="display"><img src="images/adrien-s.jpg" class="people" alt=""> Adrien D.</p>
+                    <p class="display"><img src="images/anne-s.jpg" class="people" alt=""> Anne J.</p>
+                    <p class="display"><img src="images/alayne-s.jpg" class="people" alt=""> Alayne T.</p>
+                    <p class="display"><img src="images/arry-s.jpg" class="people" alt=""> Arry Y.</p>
+                </div>
+                <div class="view-more"><button class="btn" onclick="alert('Please wait... this may take a while')"> View More</button></div>
+            </div>
+            
+        </div>
+    </div>   
+    <script src="script.js"></script> 
+</body>
+</html>
