@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="nav">
+            <div id="nav-links">
+                <h1>Dojonary</h1>
+                <input id="search" type="text" placeholder="search">
+                <button class="btn" onclick="login(this)">Login</button>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="left-column">
+                <div class="definition-box">
+                    <div class="entry-headword">
+                        <h2>ninja</h2> 
+                        <p><em>noun</em></p>
+                        <p>Plural: <em>ninjas</em></p>
+                        <button class="like btn" onclick="alert('Ninja was liked!')"> 13 likes</button>
+                    </div>
+                    <div class="definition">
+                        <p> A Practitioner skilled in the <a href="">Japanese</a> art of <a href="">Ninjustsu</a></p>
+                    </div>                   
+                </div>
+                <div class="definition-box">
+                    <div class="entry-headword">
+                        <h2>ninja</h2> 
+                        <p><em>noun</em></p>
+                        <p>Plural: <em>ninjas</em></p>
+                        <button class="like btn" onclick="alert('Ninja was liked!')"> 37 likes</button>
+                    </div>
+                    <div class="definition">
+                        <p> A <a href=""> programmer</a> who breaks down problems with <a href="">zen</a>-like focus</p>
+                    </div>                   
+                </div>
+            </div>
+            
+            <div id="right-column">
+                <div id="add-box">
+                    <p>Dojonary is <br> 
+                        definfed by <span>YOU</span></p>
+                    <button class="add btn" onclick="remove(this)">Add Definition!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
